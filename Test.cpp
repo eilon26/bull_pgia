@@ -44,8 +44,10 @@ int main() {
 		testcase.setname("Play with smart guesser");
 		RandomChooser randy;
 		SmartGuesser smarty;
-		for (uint i=0; i<1; ++i) {
-			testcase.CHECK_EQUAL(play(randy, smarty, 2, 100)<=15, true);  // smarty should always win in at most 10 turns!
+		for (uint i=0; i<10; ++i) {
+			
+			//int len = rand()%1 + 1 ; // [1,12]
+			testcase.CHECK_EQUAL(play(randy, smarty, 4, 100)<=10, true);  // smarty should always win in at most 10 turns!
 		}
 
     grade = testcase.grade();
